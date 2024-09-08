@@ -1,0 +1,445 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <style>
+            .navbar {
+                position: sticky;
+                top: 0;
+                z-index: 999;
+            }
+            .navbar h1 {
+                display: inline-block;
+                position: relative;
+                color: white;
+                left: 30;
+                text-shadow: 0 0 12px rgb(251, 65, 218);
+                z-index: 999;
+            }
+            .navbar a {
+                position: relative;
+                left: 17%;
+                top: -3;
+                margin-left: 7%;
+                display: inline-block;
+                text-decoration: none;
+                color: white;
+                font-size: 20px;
+                z-index: 999;
+            }
+            .navbar a:hover {
+                color: rgb(251, 65, 218);
+                transition: 0.3s;
+            }
+            .navbar a::after {
+                content: ' ';
+                height: 3px;
+                width: 0%;
+                background-color: rgb(251, 65, 218);
+                display: block;
+                position: absolute;
+                left: 0%;
+                bottom: -5;
+                transition: 0.3s;
+                opacity: 0;
+            }
+            .navbar a:hover::after {
+                opacity: 1;
+                width: 100%;
+            }
+            .b2h {
+                position: fixed;
+                top: 90%;
+                left: 90%;
+                z-index: 999;
+                width: 120px;
+                background-color: rgb(251, 65, 218);
+                box-shadow: 0 0 30px rgb(251, 65, 218);
+                text-align: center;
+                text-decoration: none;
+                color: white;
+                padding: 5px;
+                border-radius: 10px;
+            }
+            .b2h:hover {
+                background-color: white;
+                box-shadow: 0 0 30px white;
+                color: black;
+                transition: 0.3s;
+            }
+            /*       home            */
+            #home {
+                background-image: url('https://i.postimg.cc/zX2kCKcy/13295370-5163335.jpg');
+                background-size: cover;
+                background-position: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+            #home img {
+                width: 750px;
+                height: 750px;
+                position: relative;
+                top: 90;
+                left: 680;
+                filter: drop-shadow(15px 10px 20px rgb(251, 65, 218));
+            }
+            #home h2 {
+                position: absolute;
+                top: 210;
+                left: 100;
+                color: white;
+            }
+            #home h1 {
+                position: absolute;
+                top: 245;
+                left: 100;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                color: white;
+            }
+            #home p {
+                font-size: 30px;
+                position: absolute;
+                top: 280;
+                left: 100;
+                color: white;
+            }
+            span {
+                color: rgb(251, 65, 218);
+                font-family: 'Times New Roman', Times, serif;
+            }
+            #one {
+                position: relative;
+                left: 110;
+                top: -260;
+                color: white;
+                font-size: 15px;
+            }
+            #two {
+                position: relative;
+                left: 130;
+                top: -260;
+                color: white;
+                font-size: 20px;
+            }
+            #thr {
+                position: relative;
+                left: 150;
+                top: -260;
+                color: white;
+                font-size: 20px;
+            }
+            #four {
+                position: relative;
+                left: 170;
+                top: -260;
+                color: white;
+                font-size: 20px;
+            }
+            button {
+                position: absolute;
+                top: 70%;
+                left: 100;
+                width: 200px;
+                height: 65px;
+                border-radius: 20px;
+                font-size: 20px;
+                background-color: rgb(251, 65, 218);
+                box-shadow: 0px 0px 25px rgb(251, 65, 218);
+                z-index: 999;
+            }
+            button:hover {
+                background-color: white;
+                box-shadow: 0px 0px 25px white;
+                transition-duration: 0.4s;
+            }
+            /*       about           */
+            #about {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: rgb(24, 23, 23);
+            }
+            #about img {
+                width: 500px;
+                height: 500px;
+                position: absolute;
+                top: 100;
+                left: 50;
+            }
+            #about h1 {
+                color: white;
+                position: absolute;
+                top: 30%;
+                left: 36%;
+            }
+            #about .www {
+                font-size: 17px;
+                position: absolute;
+                top: 36%;
+                left: 36%;
+                color: white;
+                font-family: sans-serif;
+                font-family: cursive;
+            }
+            .qwerty {
+                font-size: 20px;
+                color: white;
+                position: absolute;
+                top: 40%;
+                left: 36%;
+                font-family: cursive;
+            }
+            #about button {
+                position: absolute;
+                top: 60%;
+                left: 36%;
+                width: 200px;
+                height: 65px;
+                border-radius: 20px;
+                font-size: 20px;
+                background-color: rgb(251, 65, 218);
+                box-shadow: 0px 0px 25px rgb(251, 65, 218);
+                z-index: 999;
+            }
+            #about button:hover {
+                background-color: white;
+                box-shadow: 0px 0px 25px white;
+                transition-duration: 0.4s;
+            }
+            /*       services          */
+            #services {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 200%;
+                left: 0;
+                background-color: rgb(36, 36, 36);
+            }
+            #services h1 {
+                color: white;
+                position: absolute;
+                top: 15%;
+                left: 44%;
+            }
+            .frst {
+                width: 24%;
+                height: 60%;
+                background-color: rgb(24, 23, 23);
+                position: absolute;
+                top: 30%;
+                left: 9%;
+                border-radius: 15px;
+                
+            }
+            .scnd {
+                width: 24%;
+                height: 60%;
+                background-color: rgb(24, 23, 23);
+                position: absolute;
+                top: 30%;
+                left: 40%;
+                border-radius: 15px;
+            }
+            .thrd {
+                width: 24%;
+                height: 60%;
+                background-color: rgb(24, 23, 23);
+                position: absolute;
+                top: 30%;
+                left: 70%;
+                border-radius: 15px;
+            }
+            .frst i {
+                color: rgb(251, 65, 218);
+                position: relative;
+                top: 15%;
+                left: 42%;
+                font-size: 30px;
+            }
+            .scnd i {
+                color: rgb(251, 65, 218);
+                position: relative;
+                top: 15%;
+                left: 45%;
+                font-size: 30px;
+            }
+            .thrd i {
+                color: rgb(251, 65, 218);
+                position: relative;
+                top: 15%;
+                left: 45%;
+                font-size: 30px;
+            }
+            .frst h2 {
+                position: relative;
+                top: 18%;
+                left: 14%;
+                color: white;
+            }
+            .frst button {
+                width: 180px;
+                height: 55px;
+                position: absolute;
+                top: 75%;
+                left: 25%;
+                border-radius: 30px;
+            }
+            .scnd h2 {
+                position: relative;
+                top: 18%;
+                left: 23%;
+                color: white;
+            }
+            .scnd button {
+                width: 180px;
+                height: 55px;
+                position: absolute;
+                top: 75%;
+                left: 25%;
+                border-radius: 30px;
+            }
+            .thrd h2 {
+                position: relative;
+                top: 18%;
+                left: 20%;
+                color: white;
+            }
+            .thrd button {
+                width: 180px;
+                height: 55px;
+                position: absolute;
+                top: 75%;
+                left: 25%;
+                border-radius: 30px;
+            }
+            /*       projects         */
+            #projects {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 300%;
+                left: 0;
+                background-color: rgb(24, 23, 23);
+            }
+            /*       contact       */
+            #contact {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 400%;
+                left: 0;
+                background-color: rgb(36, 36, 36);
+            }
+            #contact h1 {
+                color: white;
+                position: absolute;
+                top: 10%;
+                left: 45%;
+            }
+            .container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 4fr;
+                width: 50%;
+                height: 50%;
+                position: relative;
+                top: 20%;
+                left: 25%;
+                justify-content: center;
+                grid-auto-rows: 100px;
+                padding: 20px;
+                gap: 10px;
+            }
+            input {
+                width: 100%;
+                height: 100%;
+            }       
+            #box-5 {
+                grid-column: 1/3;
+            }
+            .butt button {
+                position: absolute;
+                top: 80%;
+                left: 45%;
+                border-radius: 30px;
+                height: 55px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <h1>PORTFOLIO</h1>
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#services">SERVICES</a>
+            <a href="#projects">MY PROJECTS</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+
+        <a href="#home" class="b2h">>> Back to TOP</a>
+        <!----home---->
+        <div id="home">
+            <h2>Hello, It's Me</h2>
+            <h1>SAM VIVEK</h1>
+            <p>And I'm  a <span class="qq">FULLSTACK DEVELOPER</span></p>
+            <a href="#"><i class="fa-brands fa-facebook" id="one"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter" id="two"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram" id="thr"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in" id="four"></i></a>
+            <button type="submit">DOWNLOAD CV</button>
+            <img src="https://i.postimg.cc/DZCcxGwp/Untitled-21.png" alt="image">
+        </div>
+        <!----about---->
+        <div id="about">
+            <img src="https://i.postimg.cc/zXWJKZ76/Untitled-2112.png">
+            <h1>About <span>Me</span></h1>
+            <p class="www">FULLSTACK DEVELOPER</p>
+            <p class="qwerty">My name is <span>Vivek</span>. I'm currently completing under-graduate degree <br>
+                 in sankethika institute of technology at carshed. 
+            </p>
+            <button type="submit">LEARN MORE</button>
+        </div>
+        <!----services---->
+        <div id="services">
+            <h1>Our <span>Services</span></h1>
+            <div class="frst">
+                <i class="fa-solid fa-code"></i>
+                <h2>WEB DEVELOPMENT</h2>
+                <button type="button">Learn More</button>
+            </div>
+            <div class="scnd">
+                <i class="fa-solid fa-paintbrush"></i>
+                <h2>WEB DESIGNING</h2>
+                <button type="button">Learn More</button>
+            </div>
+            <div class="thrd">
+                <i class="fa-solid fa-database"></i>
+                <h2>DB MANAGEMENT</h2>
+                <button type="button">Learn More</button>
+            </div>
+        </div>
+        <!----projects---->
+        <div id="projects">
+
+        </div>
+        <!----contact---->
+        <div id="contact">
+            <h1>Contact <span>Me</span></h1>
+            <div class="container">
+                <div class="box" id="box-1"><input type="text" placeholder="First Name"></div>
+                <div class="box" id="box-2"><input type="text" placeholder="Email Address"></div>
+                <div class="box" id="box-3"><input type="number" placeholder="Mobile Number"></div>
+                <div class="box" id="box-4"><input type="text" placeholder="Email Subject"></div>
+                <div class="box" id="box-5"><input type="text" placeholder="Your Message"></div>
+            </div>
+            <div class="butt">
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </body>
+</html>
